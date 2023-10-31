@@ -13,6 +13,31 @@
     tools:context=".ui.login.LoginActivity">
 
     <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="453dp"
+        android:layout_height="689dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector1" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="423dp"
+        android:layout_height="653dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="317dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/vector2" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="250dp"
         android:layout_height="70dp"
@@ -30,11 +55,11 @@
         android:layout_height="60dp"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
+        android:background="@android:color/transparent"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         android:textColorHint="@color/white"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,13 +72,13 @@
         android:layout_height="60dp"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
+        android:background="@android:color/transparent"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         android:textColorHint="@color/white"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
