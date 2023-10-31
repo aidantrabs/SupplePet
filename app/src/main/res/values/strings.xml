@@ -1,4 +1,11 @@
 <resources>
+<!--Welcome Page-->
+    <string name="petButton">Pet</string>
+    <string name="infoButton">Info</string>
+    <string name="logButton">Log</string>
+    <string name="achButton">Achievements</string>
+    <string name="welcomeSign">Hello User!</string>
+<!--    -->
     <string name="app_name">SupplePet</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
