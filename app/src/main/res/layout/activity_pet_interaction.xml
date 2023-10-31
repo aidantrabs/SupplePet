@@ -47,20 +47,64 @@
         app:layout_constraintTop_toBottomOf="@+id/pet_progress_bar" />
 
 
-    <ImageButton
+    <Button
         android:id="@+id/feed_button"
-        android:background="@color/white"
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:layout_marginLeft="67dp"
         android:layout_marginTop="375dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/feedButton"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintTop_toBottomOf="@+id/pet_dug" />
+
+    <Button
+        android:id="@+id/pet_button"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="475dp"
         android:layout_marginEnd="65dp"
         android:layout_marginRight="65dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        app:layout_constraintTop_toBottomOf="@+id/pet_dug"
-        android:text="@string/feedButton"
+        app:layout_constraintTop_toBottomOf="@+id/feed_button"
+        android:text="@string/petButton"
         android:textSize="20sp"
-        android:fontFamily="sans-serif-black"/>
+        android:fontFamily="sans-serif-black" />
+
+    <Button
+        android:id="@+id/play_button"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="375dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/playButton"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintTop_toBottomOf="@+id/pet_dug" />
+
+    <Button
+        android:id="@+id/clean_button"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="475dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/cleanButton"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintTop_toBottomOf="@+id/play_button" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -97,12 +141,5 @@
         </LinearLayout>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-
-
-
-
-
 
 </RelativeLayout>

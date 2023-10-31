@@ -20,5 +20,7 @@
     <!--Pet Interaction Page-->
     <string name="progress">Progress:</string>
     <string name="feedButton">Feed</string>
+    <string name="playButton">Play</string>
+    <string name="cleanButton">Clean</string>
 
 </resources>
