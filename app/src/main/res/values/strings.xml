@@ -16,6 +16,12 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+  
+    <!--Pet Interaction Page-->
+    <string name="progress">Progress:</string>
+    <string name="feedButton">Feed</string>
+    <string name="playButton">Play</string>
+    <string name="cleanButton">Clean</string>
     <string name="log_sleep">Sleep</string>
     <string name="log_food">Food</string>
     <string name="log_exercise">Exercise</string>
@@ -28,4 +34,5 @@
     <string name="SupplementLogDialogTitle">Supplement Log has been updated!</string>
     <string name="SupplementLogDialogOk">OK</string>
     <string name="SupplementLogDialogError">Please enter appropriate log data.</string>
+
 </resources>
