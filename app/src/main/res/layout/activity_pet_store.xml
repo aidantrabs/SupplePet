@@ -23,13 +23,12 @@
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/title_store"
                 android:contentDescription="Title Image"
-                android:marginBottom="16dp" />
+                android:layout_marginBottom="16dp" />
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
-                android:gapStrategy="alignBounds"
                 android:padding="16dp">
 
                 <!-- First Item -->
