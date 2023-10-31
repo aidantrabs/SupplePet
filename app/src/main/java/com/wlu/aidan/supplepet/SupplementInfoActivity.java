@@ -20,17 +20,26 @@ public class SupplementInfoActivity extends AppCompatActivity {
         // Bottom Nav Bar Buttons
         ImageButton homeButton = super.findViewById(R.id.home_button);
         homeButton.setOnClickListener((view) -> {
-            print("Clicked Home Button", Toast.LENGTH_LONG);
+            print("Clicked Home Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(SupplementInfoActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
         ImageButton checkButton = super.findViewById(R.id.check_button);
         checkButton.setOnClickListener((view) -> {
-            print("Clicked Check Button", Toast.LENGTH_LONG);
+            print("Clicked Check Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(SupplementInfoActivity.this, SupplementInfoActivity.class);
+            startActivity(intent);
         });
 
         ImageButton bookButton = super.findViewById(R.id.book_button);
         bookButton.setOnClickListener((view) -> {
-            print("Clicked Book Button", Toast.LENGTH_LONG);
+            print("Clicked Book Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(SupplementInfoActivity.this, SupplementLog.class);
+            startActivity(intent);
         });
 
 

@@ -23,16 +23,25 @@ public class MainActivity extends AppCompatActivity {
         ImageButton homeButton = super.findViewById(R.id.home_button);
         homeButton.setOnClickListener((view) -> {
             print("Clicked Home Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
         ImageButton checkButton = super.findViewById(R.id.check_button);
         checkButton.setOnClickListener((view) -> {
             print("Clicked Check Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(MainActivity.this, SupplementInfoActivity.class);
+            startActivity(intent);
         });
 
         ImageButton bookButton = super.findViewById(R.id.book_button);
         bookButton.setOnClickListener((view) -> {
             print("Clicked Book Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(MainActivity.this, SupplementLog.class);
+            startActivity(intent);
         });
 
         // Activity Buttons/Linear Layouts
