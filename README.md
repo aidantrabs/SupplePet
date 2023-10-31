@@ -4,8 +4,8 @@
 
 ### Nurturing Your Health Through Virtual Pet Care.
 
-![GitHub](https://img.shields.io/github/license/aidantrabs/SupplePet?style=flat-square)
-  
+![GitHub](https://img.shields.io/github/license/aidantrabs/SupplePet)
+
 </div>
 
 ## Description :pushpin: 
