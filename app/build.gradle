@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.wlu.aidan.supplepet'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.wlu.aidan.supplepet"
