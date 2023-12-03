@@ -323,6 +323,44 @@ public class SupplementInfoActivity extends AppCompatActivity {
         // Save the supplements when leaving the activity
         saveSupplements();
     }
+//Add supps to db
+//    private void addSupplementsToFirebase() {
+//        // Initialize Firestore
+//        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+//
+//        List<Map<String, Object>> supplementsList = new ArrayList<>();
+//
+//        supplementsList.add(createSupplementMap("Melatonin", "Hormone", "0.5-5mg/day",
+//                "Before bedtime", "Melatonin is a hormone that regulates sleep-wake cycles. " +
+//                        "It is commonly used as a supplement to improve sleep quality and manage sleep disorders."));
+//        supplementsList.add(createSupplementMap("Vitamin C", "Vitamin", "500-1000mg/day",
+//                "With meals", "Vitamin C is an antioxidant that supports the immune system, " +
+//                        "helps in collagen formation, and aids in wound healing."));
+//
+//        // Loop through the supplementsList and add each supplement data to Firestore
+//        for (Map<String, Object> supplement : supplementsList) {
+//            firestore.collection("supplements")
+//                    .add(supplement)
+//                    .addOnSuccessListener(documentReference ->
+//                            Log.d("Firebase", "DocumentSnapshot written with ID: " + documentReference.getId()))
+//                    .addOnFailureListener(e ->
+//                            Log.w("Firebase", "Error adding document", e));
+//        }
+//    }
+
+    // Helper method to create a Map for supplement data
+    private Map<String, Object> createSupplementMap(String name, String type, String dosage,
+                                                    String timing, String description) {
+        Map<String, Object> supplement = new HashMap<>();
+        supplement.put("name", name);
+        supplement.put("type", type);
+        supplement.put("dosage", dosage);
+        supplement.put("timing", timing);
+        supplement.put("description", description);
+        return supplement;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -341,6 +379,8 @@ public class SupplementInfoActivity extends AppCompatActivity {
 
         adapter = new SupplementAdapter(new ArrayList<>(), findViewById(R.id.activity_supplement_info_layout));
         recyclerViewSupplements.setAdapter(adapter);
+
+//        addSupplementsToFirebase();
 
         // Retrieve saved supplements and update RecyclerView
         retrieveSavedSupplements();
