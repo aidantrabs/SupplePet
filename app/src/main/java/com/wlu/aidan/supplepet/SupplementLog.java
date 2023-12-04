@@ -1,5 +1,6 @@
 package com.wlu.aidan.supplepet;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -13,18 +14,28 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class SupplementLog extends AppCompatActivity {
+    private FirebaseFirestore firestore;
+    private EditText edit_sleep, edit_food, edit_exercise, edit_intake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supplement_log);
 
+        firestore = FirebaseFirestore.getInstance();
+
         // Log Edit Texts
-        EditText edit_sleep = super.findViewById(R.id.edit_sleep);
-        EditText edit_food = super.findViewById(R.id.edit_food);
-        EditText edit_exercise = super.findViewById(R.id.edit_exercise);
-        EditText edit_intake= super.findViewById(R.id.edit_intake);
+        edit_sleep = super.findViewById(R.id.edit_sleep);
+        edit_food = super.findViewById(R.id.edit_food);
+        edit_exercise = super.findViewById(R.id.edit_exercise);
+        edit_intake= super.findViewById(R.id.edit_intake);
 
         Button btnSleep = super.findViewById(R.id.btnSleep);
         btnSleep.setOnClickListener((view) -> {
@@ -98,6 +109,8 @@ public class SupplementLog extends AppCompatActivity {
                 builder.setPositiveButton(R.string.SupplementLogDialogOk, (dialog, id) -> dialog.dismiss());
                 builder.create().show();
             }
+
+            addToFirestore(edit_sleep.getText().toString(), edit_food.getText().toString(), edit_exercise.getText().toString(), edit_intake.getText().toString());
         });
 
         // Bottom Nav Bar Buttons
@@ -124,6 +137,69 @@ public class SupplementLog extends AppCompatActivity {
             Intent intent = new Intent(SupplementLog.this, SupplementLog.class);
             startActivity(intent);
         });
+    }
+
+    private void addToFirestore(String sleep, String food, String exercise, String intake) {
+        CollectionReference dbLog = firestore.collection("loginfo");
+
+        LogInfo log = new LogInfo(sleep, food, exercise, intake);
+
+        dbLog.add(log).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(SupplementLog.this, "Log database has been updated!", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(SupplementLog.this, "Log database has failed to update!\n" + e, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    class LogInfo {
+        private String sleep, food, exercise, intake;
+
+        public LogInfo() {}
+
+        public LogInfo(String sleep, String food, String exercise, String intake) {
+            this.sleep = sleep;
+            this.food = food;
+            this.exercise = exercise;
+            this.intake = intake;
+        }
+
+        public String getSleep() {
+            return sleep;
+        }
+
+        public String getFood() {
+            return food;
+        }
+
+        public String getExercise() {
+            return exercise;
+        }
+
+        public String getIntake() {
+            return intake;
+        }
+
+        public void setSleep(String sleep) {
+            this.sleep = sleep;
+        }
+
+        public void setFood(String food) {
+            this.food = food;
+        }
+
+        public void setExercise(String exercise) {
+            this.exercise = exercise;
+        }
+
+        public void setIntake(String intake) {
+            this.intake = intake;
+        }
     }
 
     @Override
@@ -173,5 +249,4 @@ public class SupplementLog extends AppCompatActivity {
     }
 
     private boolean isChecked = true;
-
 }
