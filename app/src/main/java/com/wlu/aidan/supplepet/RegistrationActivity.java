@@ -86,13 +86,15 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Log.d(ACTIVITY_NAME, "createUserWithEmail(): success");
                             Toast.makeText(getApplicationContext(),"Registration successful!", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                            Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
                             startActivity(intent);
                         }
 
                         else {
+                            Log.w(ACTIVITY_NAME, "createUserWithEmail(): failure", task.getException());
                             Toast.makeText(getApplicationContext(),"Registration failed!" + "Please try again.", Toast.LENGTH_SHORT).show();
                         }
                     }
