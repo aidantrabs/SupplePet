@@ -124,7 +124,6 @@ public class SupplementLog extends AppCompatActivity {
             Intent intent = new Intent(SupplementLog.this, SupplementLog.class);
             startActivity(intent);
         });
-
     }
 
     @Override
