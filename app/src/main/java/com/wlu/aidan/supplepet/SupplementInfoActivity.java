@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -229,7 +230,6 @@ public class SupplementInfoActivity extends AppCompatActivity {
         }
     }
 
-
     private void addSelectedSupplement() {
         // Check if there are available supplements
         if (!supplementNames.isEmpty()) {
@@ -404,19 +404,23 @@ public class SupplementInfoActivity extends AppCompatActivity {
 
             adapter.getSupplements().clear();
             adapter.notifyDataSetChanged();
-            // Intent for Home Button
+
+            Intent intent = new Intent(SupplementInfoActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
         ImageButton checkButton = findViewById(R.id.check_button);
         checkButton.setOnClickListener((view) -> {
             print("Clicked Check Button", Toast.LENGTH_LONG);
-            // Intent for Check Button
+            Intent intent = new Intent(SupplementInfoActivity.this, SupplementInfoActivity.class);
+            startActivity(intent);
         });
 
         ImageButton bookButton = findViewById(R.id.book_button);
         bookButton.setOnClickListener((view) -> {
             print("Clicked Book Button", Toast.LENGTH_LONG);
-            // Intent for Book Button
+            Intent intent = new Intent(SupplementInfoActivity.this, SupplementLog.class);
+            startActivity(intent);
         });
 
         // Set click listener for adding a supplement
