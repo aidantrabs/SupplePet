@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         // Bottom Nav Bar Buttons
         ImageButton homeButton = super.findViewById(R.id.home_button);
         homeButton.setOnClickListener((view) -> {
@@ -63,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout logButton = (LinearLayout )findViewById(R.id.log_button);
+        LinearLayout logButton = (LinearLayout)findViewById(R.id.log_button);
         logButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent log_intent = new Intent(MainActivity.this,SupplementLog.class);
+                Intent log_intent = new Intent(MainActivity.this, SupplementLog.class);
                 startActivity(log_intent);
             }
         });
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         achButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ach_intent = new Intent(MainActivity.this,AchievementsActivity.class);
+                Intent ach_intent = new Intent(MainActivity.this, AchievementsActivity.class);
                 startActivity(ach_intent);
             }
         });
@@ -126,5 +125,4 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(this, msg, duration);
         toast.show();
     }
-
 }
