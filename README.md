@@ -1,11 +1,24 @@
 <div align="center">
   
-# _SupplePet_ :shipit:
+```
+  ______                             __          _______             __     
+ /      \                           |  \        |       \           |  \    
+|  ▓▓▓▓▓▓\__    __  ______   ______ | ▓▓ ______ | ▓▓▓▓▓▓▓\ ______  _| ▓▓_   
+| ▓▓___\▓▓  \  |  \/      \ /      \| ▓▓/      \| ▓▓__/ ▓▓/      \|   ▓▓ \  
+ \▓▓    \| ▓▓  | ▓▓  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\ ▓▓  ▓▓▓▓▓▓\ ▓▓    ▓▓  ▓▓▓▓▓▓\\▓▓▓▓▓▓  
+ _\▓▓▓▓▓▓\ ▓▓  | ▓▓ ▓▓  | ▓▓ ▓▓  | ▓▓ ▓▓ ▓▓    ▓▓ ▓▓▓▓▓▓▓| ▓▓    ▓▓ | ▓▓ __ 
+|  \__| ▓▓ ▓▓__/ ▓▓ ▓▓__/ ▓▓ ▓▓__/ ▓▓ ▓▓ ▓▓▓▓▓▓▓▓ ▓▓     | ▓▓▓▓▓▓▓▓ | ▓▓|  \
+ \▓▓    ▓▓\▓▓    ▓▓ ▓▓    ▓▓ ▓▓    ▓▓ ▓▓\▓▓     \ ▓▓      \▓▓     \  \▓▓  ▓▓
+  \▓▓▓▓▓▓  \▓▓▓▓▓▓| ▓▓▓▓▓▓▓| ▓▓▓▓▓▓▓ \▓▓ \▓▓▓▓▓▓▓\▓▓       \▓▓▓▓▓▓▓   \▓▓▓▓ 
+                  | ▓▓     | ▓▓                                             
+                  | ▓▓     | ▓▓                                             
+                   \▓▓      \▓▓                                             
+```
 
 ### Nurturing Your Health Through Virtual Pet Care.
 
-![GitHub](https://img.shields.io/github/license/aidantrabs/SupplePet?style=flat-square)
-  
+![GitHub](https://img.shields.io/github/license/aidantrabs/SupplePet)
+
 </div>
 
 ## Description :pushpin: 

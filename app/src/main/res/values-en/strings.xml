@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--Welcome Page-->
+    <!--Welcome Page-->
     <string name="petButton">Pet</string>
     <string name="infoButton">Info</string>
     <string name="logButton">Log</string>
     <string name="achButton">Achievements</string>
     <string name="welcomeSign">Hello User!</string>
-<!--    -->
+    <!--    -->
     <string name="app_name">SupplePet</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -16,7 +17,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-  
+
     <!--Pet Interaction Page-->
     <string name="progress">Progress:</string>
     <string name="feedButton">Feed</string>
@@ -35,5 +36,4 @@
     <string name="SupplementLogDialogOk">OK</string>
     <string name="SupplementLogDialogError">Please enter appropriate log data.</string>
     <string name="pet">Pet</string>
-
 </resources>
