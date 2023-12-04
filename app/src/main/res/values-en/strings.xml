@@ -16,13 +16,13 @@
     <string name="edit_pass_hint">Enter Password</string>
     <string name="edit_pass_conf_hint">Re-enter Password</string>
     <string name="action_sign_in_short">Sign In</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="welcome">"Welcome!"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
     <!--Pet Interaction Page-->
-    <string name="progress">Progress:</string>
+    <string name="progress">Progress</string>
     <string name="feedButton">Feed</string>
     <string name="playButton">Play</string>
     <string name="cleanButton">Clean</string>
@@ -34,9 +34,17 @@
     <string name="edit_food">Did you eat appropriately today?</string>
     <string name="edit_exercise">Did you exercise today?</string>
     <string name="edit_intake">Did you take your supplements today?</string>
+    <string name="log_title"> User Log </string>
     <string name="update_log">Update Log</string>
     <string name="SupplementLogDialogTitle">Supplement Log has been updated!</string>
     <string name="SupplementLogDialogOk">OK</string>
     <string name="SupplementLogDialogError">Please enter appropriate log data.</string>
     <string name="pet">Pet</string>
+
+    <!-- Supplement Info -->
+    <string name="supplement_info_title"> Supplement Info</string>
+
+    <!-- Pet Store -->
+    <string name="pet_store_title"> Pet Store </string>
+    <string name="coming_soon"> Coming Soon! </string>
 </resources>
