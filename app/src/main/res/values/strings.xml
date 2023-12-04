@@ -1,22 +1,26 @@
 <resources>
-<!--Welcome Page-->
+    <!--Welcome Page-->
     <string name="petButton">Pet</string>
     <string name="infoButton">Info</string>
     <string name="logButton">Log</string>
     <string name="achButton">Achievements</string>
     <string name="welcomeSign">Hello User!</string>
-<!--    -->
+
+    <!--  Login  -->
     <string name="app_name">SupplePet</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="edit_email_hint">Enter Email</string>
+    <string name="edit_pass_hint">Enter Password</string>
+    <string name="edit_pass_conf_hint">Re-enter Password</string>
+    <string name="action_sign_in_short">Sign In</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-  
+
     <!--Pet Interaction Page-->
     <string name="progress">Progress:</string>
     <string name="feedButton">Feed</string>
