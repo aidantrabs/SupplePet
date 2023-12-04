@@ -33,26 +33,35 @@ public class PetInteractionActivity extends AppCompatActivity {
         ImageButton homeButton = super.findViewById(R.id.home_button);
         homeButton.setOnClickListener((view) -> {
             print("Clicked Home Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(PetInteractionActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
         ImageButton checkButton = super.findViewById(R.id.check_button);
         checkButton.setOnClickListener((view) -> {
             print("Clicked Check Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(PetInteractionActivity.this, SupplementInfoActivity.class);
+            startActivity(intent);
         });
 
         ImageButton bookButton = super.findViewById(R.id.book_button);
         bookButton.setOnClickListener((view) -> {
             print("Clicked Book Button",Toast.LENGTH_LONG);
+
+            Intent intent = new Intent(PetInteractionActivity.this, SupplementLog.class);
+            startActivity(intent);
         });
 
-       feedButton.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               currentProgress = currentProgress + 10;
-               progressBar.setProgress(currentProgress);
-               progressBar.setMax(100);
-           }
-       });
+        feedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentProgress = currentProgress + 10;
+                progressBar.setProgress(currentProgress);
+                progressBar.setMax(100);
+            }
+        });
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

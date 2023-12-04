@@ -35,4 +35,5 @@
     <string name="SupplementLogDialogTitle">Supplement Log has been updated!</string>
     <string name="SupplementLogDialogOk">OK</string>
     <string name="SupplementLogDialogError">Please enter appropriate log data.</string>
+    <string name="pet">Pet</string>
 </resources>
