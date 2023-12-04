@@ -32,7 +32,6 @@ public class RegistrationActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     private boolean validEmail;
-    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
