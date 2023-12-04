@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Matcher;
@@ -29,6 +30,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private EditText emailRegister, passwordRegister, passwordConfirmation;
     private Button registerBtn;
+    private TextView accountSignIn;
     private FirebaseAuth mAuth;
 
     private boolean validEmail;
@@ -45,11 +47,20 @@ public class RegistrationActivity extends AppCompatActivity {
         passwordRegister = findViewById(R.id.editPasswordRegistration);
         passwordConfirmation = findViewById(R.id.editPasswordRegistrationConf);
         registerBtn = findViewById(R.id.btnSubmitRegistration);
+        accountSignIn = findViewById(R.id.accountLogin);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 registerUser();
+            }
+        });
+
+        accountSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -76,7 +87,7 @@ public class RegistrationActivity extends AppCompatActivity {
             return;
         }
 
-        if (passwordConf.isEmpty() || password != passwordConf) {
+        if (passwordConf.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Passwords don't match!", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -95,7 +106,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                         else {
                             Log.w(ACTIVITY_NAME, "createUserWithEmail(): failure", task.getException());
-                            Toast.makeText(getApplicationContext(),"Registration failed!" + "Please try again.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Registration failed!" + " Please try again.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
