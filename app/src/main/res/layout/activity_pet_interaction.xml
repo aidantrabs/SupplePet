@@ -10,16 +10,25 @@
     app:circularflow_radiusInDP="30dp"
     tools:context=".PetInteractionActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/progress"
-        android:textColor="#89C9EC"
-        android:textSize="35sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="vertical"
+        android:background="@drawable/header"
+        android:layout_marginTop="-50dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:text="@string/progress"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black">
+        </TextView>
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/pet_progress_bar"
@@ -30,9 +39,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="83dp"
-        android:progressDrawable="@drawable/pet_interaction_progress_bar"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_marginTop="160dp"
+        android:progressDrawable="@drawable/pet_interaction_progress_bar" />
 
     <ImageView
         android:id="@+id/pet_dug"
@@ -42,9 +50,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="78dp"
         android:contentDescription="@string/pet"
         android:src="@drawable/tuxedodug"
         app:layout_constraintTop_toBottomOf="@+id/pet_progress_bar" />
@@ -55,14 +63,13 @@
         android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="450dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="65dp"
         android:backgroundTint="#69B3D2"
         android:fontFamily="sans-serif-black"
         android:text="@string/feedButton"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintTop_toBottomOf="@+id/pet_dug"
         app:rippleColor="#81C0F3"
         app:strokeColor="#00FFFFFF" />
@@ -73,13 +80,12 @@
         android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="475dp"
+        android:layout_marginTop="520dp"
         android:layout_marginEnd="25dp"
         android:backgroundTint="#69B3D2"
         android:fontFamily="sans-serif-black"
         android:text="@string/petButton"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintTop_toBottomOf="@+id/feed_button" />
 
     <Button
@@ -88,13 +94,12 @@
         android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="450dp"
         android:layout_marginEnd="25dp"
         android:backgroundTint="#69B3D2"
         android:fontFamily="sans-serif-black"
         android:text="@string/playButton"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintTop_toBottomOf="@+id/pet_dug" />
 
     <Button
@@ -103,49 +108,45 @@
         android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="475dp"
+        android:layout_marginTop="520dp"
         android:layout_marginEnd="25dp"
         android:backgroundTint="#69B3D2"
         android:fontFamily="sans-serif-black"
         android:text="@string/cleanButton"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintTop_toBottomOf="@+id/play_button" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white">
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
-
             <ImageButton
                 android:id="@+id/book_button"
-                android:layout_width="110dp"
-                android:layout_height="100dp"
-                android:background="@color/white"
-                android:src="@drawable/book"></ImageButton>
-
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:src="@drawable/book"
+                android:background="@color/white">
+            </ImageButton>
             <ImageButton
                 android:id="@+id/home_button"
-                android:layout_width="110dp"
-                android:layout_height="100dp"
-                android:background="@color/white"
-                android:src="@drawable/home"></ImageButton>
-
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:src="@drawable/home"
+                android:background="@color/white">
+            </ImageButton>
             <ImageButton
                 android:id="@+id/check_button"
-                android:layout_width="110dp"
-                android:layout_height="100dp"
-                android:background="@color/white"
-                android:src="@drawable/check"></ImageButton>
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:src="@drawable/check"
+                android:background="@color/white">
+            </ImageButton>
         </LinearLayout>
-
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>
